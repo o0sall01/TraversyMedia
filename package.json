@@ -1,0 +1,16 @@
+{
+  "name": "TraversyMedia",
+  "version": "1.0.0",
+  "description": "This repository is about css custom properties. In other words, it's about css variables.",
+  "main": "index.js",
+"scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/o0sall01/TraversyMedia",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
