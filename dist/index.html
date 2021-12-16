@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="default.css">
+    <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
 
@@ -35,10 +36,10 @@
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
 
                     <div id="theme-options-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div  data-mode="light"  id="light-mode" class="theme-dot"></div>
+                        <div  data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div  data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div  data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
@@ -116,7 +117,7 @@
                         <div class="post-preview">
                             <h6 class="post-title">Windows Form Application</h6>
                             <p class="post-intro">Upgrated UPS Flight Data Acquisition to provide centralized error handling and logging for more than 1,000 FDA workstations</p>
-                            <a href="#">Read More</a>
+                            <a href="post.html">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -137,7 +138,7 @@
                         <img  class="thumbnail" src="images/chezseneba.png" alt="membership">
                         <div class="post-preview">
                             <h6 class="post-title">Restaurant Website</h6>
-                            <p class="post-intro">Designed and Built Chez Seneba restaurant website for my community in Louisville to make it know to the public</p>
+                            <p class="post-intro">Designed and Built Chez Seneba restaurant website for my community in Louisville to make it known to the public</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -167,6 +168,6 @@
             </form>
         </div>
     </section>
-
+<script src="script.js"></script>
 </body>
 </html>
