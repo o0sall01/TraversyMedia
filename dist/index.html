@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="default.css">
+    <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
 
@@ -35,10 +36,10 @@
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
 
                     <div id="theme-options-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div  data-mode="light"  id="light-mode" class="theme-dot"></div>
+                        <div  data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div  data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div  data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">*Theme settings will be saved for<br>your next visit</p>
@@ -66,17 +67,17 @@
             <div class="about-wrapper">
                 <div class="about-me">
                     <h4>More about me</h4>
-                    <p>I build new projects just to tickle my brain and love teaching others how they're made.</p>
+                    <p>I build new projects for UPS as well as my own personal projects just to enhance my skills and gain knowlegde and love teaching Mathematics.</p>
                 
-                    <p>While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.</p>
+                    <p>While I keep busy building projects, I'm still in search of a great team & projects that interest me.</p>
                     <hr>
                 <h4>TOP EXPERTISE</h4>
-                <p>Fullstack developer with primary focus on C#, Java, SQL, HTML, CSS,JavaScript, NodeJS and React: <a  target="_blank" href="resume.pdf">Download Resume</a></p>
+                <p>Fullstack developer with primary focus on C#, SQL, HTML, CSS,JavaScript, NodeJS and React: <a  target="_blank" href="Oumar_Sall_Resume.pdf">Download Resume</a></p>
                 
                     <div id="skills">
                         <ul>
-                            <li>C# Java</li>
-                            <li>HTML CSS JavaScript</li>
+                            <li>C# HTML</li>
+                            <li>CSS JavaScript</li>
                             <li>NodeJS React</li>
                             <li>SQL Server Oracle</li>
                             <li>T-SQL PL-SQL</li>
@@ -95,7 +96,7 @@
 
                 <div class="social-links">
                     <img src="images/github.png" alt="social_img" id="social_img">
-                    <h3>Find me on Twitter & Youtube</h3>
+                    <h3>Find me on Github & Youtube</h3>
                     <a  target="_blank" href="#">Github: @o0sall01</a>
                     <br>
                     <a target="_blank" href="#">Youtube: @o0sall05</a>
@@ -112,21 +113,21 @@
             <div class="post-wrapper">
                 <div>
                     <div class="post">
-                        <img  class="thumbnail" src="images/dash.jpg" alt="dash">
+                        <img  class="thumbnail" src="images/FDA.PNG" alt="dash">
                         <div class="post-preview">
-                            <h6 class="post-title">Laboratory Management System</h6>
-                            <p class="post-intro">Designed built & maintained the lab managment system for FOI Laboratories</p>
-                            <a href="#">Read More</a>
+                            <h6 class="post-title">Windows Form Application</h6>
+                            <p class="post-intro">Upgrated UPS Flight Data Acquisition to provide centralized error handling and logging for more than 1,000 FDA workstations</p>
+                            <a href="post.html">Read More</a>
                         </div>
                     </div>
                 </div>
 
                 <div>
                     <div class="post">
-                        <img  class="thumbnail" src="images/ecom.jpg" alt="ecom">
+                        <img  class="thumbnail" src="images/Services.PNG" alt="ecom">
                         <div class="post-preview">
-                            <h6 class="post-title">Online Store - CoursePost Title</h6>
-                            <p class="post-intro">Online store with paypal payments integration and guest user shopping</p>
+                            <h6 class="post-title">Windows Services</h6>
+                            <p class="post-intro">Designed and Built UPS Windows Services for AQD (Aviation Quality Database) safety reporting tools for UPS airlines</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -134,10 +135,10 @@
                 
                 <div>
                     <div class="post">
-                        <img  class="thumbnail" src="images/membership site.jpg" alt="membership">
+                        <img  class="thumbnail" src="images/chezseneba.png" alt="membership">
                         <div class="post-preview">
-                            <h6 class="post-title">Membership Website</h6>
-                            <p class="post-intro">Modulized guide for online courses with step by step instructions  </p>
+                            <h6 class="post-title">Restaurant Website</h6>
+                            <p class="post-intro">Designed and Built Chez Seneba restaurant website for my community in Louisville to make it known to the public</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -150,23 +151,41 @@
     <section class="s2">
         <div class="main-container">
             <h3 style="text-align: center;">Get In Touch</h3>
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
                 <label for="">Name</label>
                 <input class="input-field" type="text" name="name">
 
                 <label for="">Subject</label>
-                <input class="input-field" type="text" name="subject">
+                <input id="subject" class="input-field" type="text" name="subject">
 
                 <label for="">Email</label>
-                <input class="input-field" type="text" name="email">
+                <input  id="email" class="input-field" type="email" name="email">
 
                 <label for="">Message</label>
-                <textarea class="input-field" name="message"></textarea>
+                <textarea class="input-field" name="message">Sending email is not functional now and it is coming soon</textarea>
 
                 <input id="submit-btn" type="submit" value="Send">
             </form>
         </div>
     </section>
-
+<script src="script.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail() {
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "o0sall05@gmail.com",
+            Password : "",
+            SSL: Yes,
+            Authentication: Yes,
+            To : 'o0sall05@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : document.getElementById("email").value,
+            Body : "And this is the body"
+        }).then(
+            message => alert(message)
+        );
+    }
+</script>
 </body>
 </html>
